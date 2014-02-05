@@ -12,18 +12,18 @@
  *
  * @since Visual 0.5
  */
- 
+
 function visual_get_option( $name, $default = false ) {
 
-	if ( get_option('visual-theme') ) {
-		$options = get_option('visual-theme');
-	}
+  if ( get_option('visual-theme') ) {
+    $options = get_option('visual-theme');
+  }
 
-	if ( isset( $options[$name] ) ) {
-		return $options[$name];
-	} else {
-		return $default;
-	}
+  if ( isset( $options[$name] ) ) {
+    return $options[$name];
+  } else {
+    return $default;
+  }
 }
 
 /**
@@ -35,12 +35,12 @@ function visual_get_option( $name, $default = false ) {
  */
 
 function visual_return_footer_text() {
-	$footer_text = sprintf(
-		'<a href="%1$s" title="%2$s" rel="generator">WordPress</a> <a href="%3$s">%4$s</a>',
-		esc_url( 'http://wordpress.org' ),
-		__( 'A Semantic Personal Publishing Platform', 'visual' ),
-		esc_url( 'http://wptheming.com' ),
-		__( 'Theme: Visual', 'visual' )
+  $footer_text = sprintf(
+    '<a href="%1$s" title="%2$s" rel="generator">WordPress</a> <a href="%3$s">%4$s</a>',
+    esc_url( 'http://wordpress.org' ),
+    __( 'A Semantic Personal Publishing Platform', 'visual' ),
+    esc_url( 'http://wptheming.com' ),
+    __( 'Theme: Visual', 'visual' )
     );
     return $footer_text;
 }

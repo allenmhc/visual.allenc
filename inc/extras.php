@@ -12,8 +12,8 @@
  * @since Visual 0.1
  */
 function visual_page_menu_args( $args ) {
-	$args['show_home'] = true;
-	return $args;
+  $args['show_home'] = true;
+  return $args;
 }
 add_filter( 'wp_page_menu_args', 'visual_page_menu_args' );
 
@@ -23,12 +23,12 @@ add_filter( 'wp_page_menu_args', 'visual_page_menu_args' );
  * @since Visual 0.1
  */
 function visual_body_classes( $classes ) {
-	// Adds a class of group-blog to blogs with more than 1 published author
-	if ( is_multi_author() ) {
-		$classes[] = 'group-blog';
-	}
+  // Adds a class of group-blog to blogs with more than 1 published author
+  if ( is_multi_author() ) {
+    $classes[] = 'group-blog';
+  }
 
-	return $classes;
+  return $classes;
 }
 add_filter( 'body_class', 'visual_body_classes' );
 
@@ -38,14 +38,14 @@ add_filter( 'body_class', 'visual_body_classes' );
  * @since Visual 0.1
  */
 function visual_enhanced_image_navigation( $url, $id ) {
-	if ( ! is_attachment() && ! wp_attachment_is_image( $id ) )
-		return $url;
+  if ( ! is_attachment() && ! wp_attachment_is_image( $id ) )
+    return $url;
 
-	$image = get_post( $id );
-	if ( ! empty( $image->post_parent ) && $image->post_parent != $id )
-		$url .= '#main';
+  $image = get_post( $id );
+  if ( ! empty( $image->post_parent ) && $image->post_parent != $id )
+    $url .= '#main';
 
-	return $url;
+  return $url;
 }
 add_filter( 'attachment_link', 'visual_enhanced_image_navigation', 10, 2 );
 
@@ -55,24 +55,24 @@ add_filter( 'attachment_link', 'visual_enhanced_image_navigation', 10, 2 );
  * @since Visual 0.1
  */
 function visual_wp_title( $title, $sep ) {
-	global $page, $paged;
+  global $page, $paged;
 
-	if ( is_feed() )
-		return $title;
+  if ( is_feed() )
+    return $title;
 
-	// Add the blog name
-	$title .= get_bloginfo( 'name' );
+  // Add the blog name
+  $title .= get_bloginfo( 'name' );
 
-	// Add the blog description for the home/front page.
-	$site_description = get_bloginfo( 'description', 'display' );
-	if ( $site_description && ( is_home() || is_front_page() ) )
-		$title .= " $sep $site_description";
+  // Add the blog description for the home/front page.
+  $site_description = get_bloginfo( 'description', 'display' );
+  if ( $site_description && ( is_home() || is_front_page() ) )
+    $title .= " $sep $site_description";
 
-	// Add a page number if necessary:
-	if ( $paged >= 2 || $page >= 2 )
-		$title .= " $sep " . sprintf( __( 'Page %s', 'visual' ), max( $paged, $page ) );
+  // Add a page number if necessary:
+  if ( $paged >= 2 || $page >= 2 )
+    $title .= " $sep " . sprintf( __( 'Page %s', 'visual' ), max( $paged, $page ) );
 
-	return $title;
+  return $title;
 }
 add_filter( 'wp_title', 'visual_wp_title', 10, 2 );
 
@@ -88,14 +88,14 @@ add_filter( 'wp_title', 'visual_wp_title', 10, 2 );
 
 class Visual_Nav_Walker extends Walker_Nav_Menu {
 
-	function display_element( $element, &$children_elements, $max_depth, $depth=0, $args, &$output ) {
-		$id_field = $this->db_fields['id'];
-		if ( !empty( $children_elements[$element->$id_field] ) && ( $depth == 0 ) ) {
-			$element->classes[] = 'has-children'; // Use any classname you like
-		}
-		Walker_Nav_Menu::display_element( $element, $children_elements, $max_depth, $depth, $args, $output );
-	}
-	
+  function display_element( $element, &$children_elements, $max_depth, $depth=0, $args, &$output ) {
+    $id_field = $this->db_fields['id'];
+    if ( !empty( $children_elements[$element->$id_field] ) && ( $depth == 0 ) ) {
+      $element->classes[] = 'has-children'; // Use any classname you like
+    }
+    Walker_Nav_Menu::display_element( $element, $children_elements, $max_depth, $depth, $args, $output );
+  }
+
 }
 
 /**
@@ -104,14 +104,14 @@ class Visual_Nav_Walker extends Walker_Nav_Menu {
  * @package Visual
  * @since Visual 0.9
  */
- 
+
 function visual_rss( $content ) {
-	if ( has_post_thumbnail() ) {
-		global $post;
-		$image = '<p>' . get_the_post_thumbnail( $post->ID, 'visual-thumbnail' ) . '</p>';
-		$content = $image . $content;
-	}
-	return $content;
+  if ( has_post_thumbnail() ) {
+    global $post;
+    $image = '<p>' . get_the_post_thumbnail( $post->ID, 'visual-thumbnail' ) . '</p>';
+    $content = $image . $content;
+  }
+  return $content;
 }
 
 add_filter( 'the_excerpt_rss', 'visual_rss' );
