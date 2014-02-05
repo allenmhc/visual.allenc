@@ -155,6 +155,8 @@ add_action( 'wp_enqueue_scripts', 'visual_scripts' );
 function visual_fonts() {
     $font_families = array();
     $font_families[] = 'Raleway:400,700';
+    $font_families[] = 'Lato:100,300,400,900';
+    $font_families[] = 'Roboto+Condensed:300,400,700';
     $protocol = is_ssl() ? 'https' : 'http';
     $query_args = array(
       'family' => implode( '|', $font_families ),

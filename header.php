@@ -20,6 +20,8 @@
 <![endif]-->
 
 <?php wp_head(); ?>
+
+<link rel="stylesheet" id="style-allenc-css" href="<?php bloginfo('stylesheet_directory'); ?>/allenc.css" type="text/css" />
 </head>
 
 <body <?php body_class(); ?>>
@@ -28,7 +30,9 @@
   <header id="masthead" class="site-header" role="banner">
     <div class="section clearfix">
       <hgroup>
-        <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+        <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+          <span class="domain">allenc</span><span class="tld">.com</span>
+        </a></h1>
       </hgroup>
 
       <nav role="navigation" class="site-navigation main-navigation clearfix">

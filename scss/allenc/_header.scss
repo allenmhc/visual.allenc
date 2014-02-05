@@ -1,0 +1,14 @@
+// Header style overrides
+.site-title a {
+  letter-spacing: 4px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-shadow: none;
+  .tld {
+    font-weight: 100;
+    font-size: 1.4rem;
+  }
+  &:hover {
+    color: $color-yellow;
+  }
+}

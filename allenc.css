@@ -1,0 +1,16 @@
+/*
+  CSS overrides and customizations on top of Visual.
+*/
+h1 {
+  font-family: "Lato", Arial, sans-serif; }
+
+.site-title a {
+  letter-spacing: 4px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-shadow: none; }
+  .site-title a .tld {
+    font-weight: 100;
+    font-size: 1.4rem; }
+  .site-title a:hover {
+    color: #f1c40f; }
