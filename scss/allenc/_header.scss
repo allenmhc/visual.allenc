@@ -7,9 +7,12 @@
   }
 }
 
-.site-header {
+.site-header-link {
   display: block;
   &:hover, &:active { text-decoration: none; }
+}
+
+.site-header {
   &:hover {
     .site-title-icon {
       .dot { background-color: $color-yellow; }

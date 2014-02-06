@@ -30,7 +30,7 @@
   <header id="masthead" class="site-header" role="banner">
     <div class="section clearfix">
       <hgroup>
-        <a class="site-header" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+        <a class="site-header-link" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
           <h2 class="site-title-icon">
             <div class="first dot"></div>
             <div class="second dot"></div>
@@ -46,7 +46,7 @@
       </hgroup>
 
       <nav role="navigation" class="site-navigation main-navigation clearfix">
-        <h3 class="assistive-text menu-toggle"><a class="icon-menu" href="#menu-main"><?php _e( 'Menu', 'visual' ); ?></a></h3>
+        <h3 class="assistive-text menu-toggle"><a class="icon-menu" href="#menu-main"></a></h3>
         <div class="assistive-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'visual' ); ?>"><?php _e( 'Skip to content', 'visual' ); ?></a></div>
       <?php
       if ( has_nav_menu( 'primary' ) ) {
