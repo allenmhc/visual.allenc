@@ -1,16 +1,78 @@
 /*
   CSS overrides and customizations on top of Visual.
 */
-h1 {
+.site-title, .site-description {
   font-family: "Lato", Arial, sans-serif; }
 
-.site-title a {
-  letter-spacing: 4px;
-  font-weight: 400;
+body {
+  min-width: 480px; }
+
+#masthead {
+  box-shadow: 0 1px 1px 0 rgba(241, 196, 15, 0.8); }
+  #masthead hgroup {
+    margin-top: 20px;
+    min-height: 60px; }
+
+.site-header {
+  display: block; }
+  .site-header:hover, .site-header:active {
+    text-decoration: none; }
+  .site-header:hover .site-title-icon .dot {
+    background-color: #f1c40f; }
+  .site-header:hover .site-title-icon .dot.first {
+    top: 10px; }
+  .site-header:hover .site-title-icon .dot.second {
+    bottom: 10px; }
+  .site-header:hover .site-title-icon .dot.third {
+    right: 10px; }
+
+.site-title-icon {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  float: left;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  border: 3px solid #ecf0f1;
+  border-radius: 6px; }
+  .site-title-icon .dot {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: #ecf0f1;
+    border-radius: 3px;
+    transition: all 0.4s linear; }
+  .site-title-icon .dot.first {
+    top: 2px;
+    right: 2px; }
+  .site-title-icon .dot.second {
+    bottom: 2px;
+    left: 2px; }
+  .site-title-icon .dot.third {
+    bottom: 2px;
+    right: 2px; }
+
+.site-title-block {
+  float: right;
+  margin-left: 10px; }
+
+.site-title {
+  color: #ecf0f1;
+  transition: color 0.2s ease-out;
   text-transform: uppercase;
-  text-shadow: none; }
-  .site-title a .tld {
+  font-weight: 400;
+  letter-spacing: 4px;
+  text-shadow: none;
+  line-height: 1; }
+  .site-title .tld {
     font-weight: 100;
     font-size: 1.4rem; }
-  .site-title a:hover {
+  a:hover .site-title {
     color: #f1c40f; }
+
+.site-description {
+  color: #bdc3c7;
+  font-weight: 100;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+  line-height: 1.5; }

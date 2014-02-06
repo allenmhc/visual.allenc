@@ -30,9 +30,19 @@
   <header id="masthead" class="site-header" role="banner">
     <div class="section clearfix">
       <hgroup>
-        <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-          <span class="domain">allenc</span><span class="tld">.com</span>
-        </a></h1>
+        <a class="site-header" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+          <h2 class="site-title-icon">
+            <div class="first dot"></div>
+            <div class="second dot"></div>
+            <div class="third dot"></div>
+          </h2>
+          <div class="site-title-block">
+            <h1 class="site-title">
+              <span class="domain">allenc</span><span class="tld">.com</span>
+            </h1>
+            <h2 class="site-description"><?php bloginfo("description"); ?></h2>
+          </div>
+        </a>
       </hgroup>
 
       <nav role="navigation" class="site-navigation main-navigation clearfix">
