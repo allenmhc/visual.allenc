@@ -2,3 +2,10 @@
   font-family: $header-font-family;
 }
 
+.entry-title {
+  font-family: $title-font-family;
+}
+
+.entry-meta, .entry-summary, .entry-content {
+  font-family: $para-font-family;
+}
