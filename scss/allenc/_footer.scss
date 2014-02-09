@@ -1,0 +1,66 @@
+// Footer style overrides
+
+#colophon {
+  text-shadow: none;
+  padding-bottom: 30px;
+}
+
+#copyright {
+  font-family: $header-font-family;
+  font-size: 1.2rem;
+  color: $color-white;
+  &:hover {
+    color: $color-yellow;
+  }
+}
+
+#social {
+  margin-bottom: 10px;
+}
+
+#social-icons {
+  list-style: none;
+  margin: 0;
+
+  .social-icon {
+    float: left;
+    margin-right: 10px;
+    &:last-child { margin-right: 0; }
+
+    a {
+      @include box-sizing();
+      $color-social-icon: $color-white;
+      $size-social-icon: 44px;
+      transition: background-color 0.2s linear;
+      text-decoration: none;
+      display: block;
+      width: $size-social-icon;
+      height: $size-social-icon;
+      margin: 0 auto;
+      padding: 9px 0 6px;
+      text-align: center;
+      border: 1px solid $color-social-icon;
+      color: $color-social-icon;
+      border-radius: 6px;
+      &:before {
+        font: 130%/1.35 zocial;
+        font-style: normal;
+        font-weight: normal;
+        display: inline-block;
+      }
+    }
+
+    span {
+      display: none;
+    }
+
+    @include social-icon-content-color("twitter", "T", $color-twitter);
+    @include social-icon-content-color("googleplus", "+", $color-googleplus);
+    @include social-icon-content-color("linkedin", "L", $color-linkedin);
+    @include social-icon-content-color("quora", "q", $color-quora);
+    @include social-icon-content-color("github", "\00E8", $color-github);
+    @include social-icon-content-color("rss", "R", $color-rss);
+
+    a.linkedin { padding-top: 8px; }
+  }
+}

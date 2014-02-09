@@ -158,7 +158,6 @@ function visual_fonts() {
     $font_families[] = 'Lato:100,300,400,900';
     $font_families[] = 'Titillium+Web:300,400,700';
     $font_families[] = 'Open+Sans:400,700,400italic,700italic';
-    $font_families[] = 'PT+Sans:400,700,400italic,700italic';
     $protocol = is_ssl() ? 'https' : 'http';
     $query_args = array(
       'family' => implode( '|', $font_families ),

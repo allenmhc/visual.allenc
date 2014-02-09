@@ -2,3 +2,12 @@
   box-sizing: border-box;
   -moz-box-sizing: border-box;
 }
+
+@mixin social-icon-content-color($name, $content, $color) {
+  a.#{$name} {
+    background-color: lighten(black, 20%);
+    &:before { content: $content; }
+    &:hover { background-color: darken($color, 10%); }
+    &:active { background-color: darken($color, 20%); }
+  }
+}
