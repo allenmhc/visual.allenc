@@ -51,6 +51,20 @@
     </ul>
   </div>
 
+  <div class="section clearfix" id="search-form-wrapper">
+    <?php get_search_form(); ?>
+    <?php if (is_search()): ?>
+      <?php
+      global $wp_query;
+      $total_results = $wp_query->found_posts;
+      ?>
+      <aside id="search-info">
+        [<?php echo $total_results; ?>]
+      </aside>
+      <?php wp_reset_query(); ?>
+    <?php endif; ?>
+  </div>
+
   <div class="section clearfix" id="copyright">
     <span>copyright &copy;&nbsp;<?php
       $start_year = 2011;

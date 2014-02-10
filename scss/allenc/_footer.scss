@@ -15,7 +15,7 @@
 }
 
 #social {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 #social-icons {
@@ -43,7 +43,7 @@
       color: $color-social-icon;
       border-radius: 6px;
       &:before {
-        font: 130%/1.35 zocial;
+        font: 150% zocial;
         font-style: normal;
         font-weight: normal;
         display: inline-block;
@@ -63,4 +63,62 @@
 
     a.linkedin { padding-top: 8px; }
   }
+}
+
+#search-form-wrapper {
+  margin-bottom: 20px;
+}
+
+#searchform {
+  position: relative;
+
+  fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  #search-label {
+    background: transparent url(img/search.png) no-repeat top left;
+    cursor: pointer;
+    display: inline-block;
+    text-indent: -99999px;
+    width: 16px;
+    height: 17px;
+    margin: 0 10px;
+    position: absolute;
+    left: 0;
+    top: 13px;
+    clip: auto;
+  }
+
+  #search {
+    @include box-sizing();
+    background: lighten(black, 25%);
+    border-radius: 6px;
+    color: $color-white-dark;
+    width: 314px;
+    border: 1px solid $color-white-dark;
+    outline: none;
+    padding: 10px 5px 10px 35px;
+    font-family: $para-font-family;
+    transition: all 0.1s linear;
+    &:focus {
+      color: black(0.75);
+      background: lighten(black, 50%);
+    }
+  }
+
+}
+
+#search-info {
+  font-size: 1.2rem;
+  line-height: 0;
+  color: $color-white-dark;
+  font-family: $para-font-family;
+  position: relative;
+  z-index: 100;
+  width: 314px;
+  margin: -22px -10px 22px;
+  text-align: right;
 }
