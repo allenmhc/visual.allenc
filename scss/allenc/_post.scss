@@ -3,6 +3,14 @@
   box-shadow: none;
 }
 
+.entry-header {
+  border-bottom: none;
+
+  .entry-meta {
+    margin-top: 5px;
+  }
+}
+
 .entry-title {
   line-height: 1.3;
   color: $color-blue-dark;
@@ -14,14 +22,32 @@
 
 .entry-meta {
   line-height: 1;
-  margin-top: 5px;
   a {
     color: $color-blue-dark;
   }
 }
 
+.entry-summary {
+  border-top-color: $color-white-dark;
+  border-bottom: none;
+}
+
 .masonry {
   .entry-title {
     @extend .entry-title;
+  }
+
+  footer.entry-meta {
+    border-top-color: $color-white-dark;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    a {
+      text-shadow: none;
+      color: $color-blue-dark;
+      &:hover { color: color-hover($color-blue-dark); }
+      &:active { color: color-active($color-blue-dark); }
+    }
+    .post-link a:hover { color: color-hover($color-yellow); }
+    .post-link a:active { color: color-active($color-yellow); }
   }
 }
