@@ -1226,3 +1226,5 @@ body {
     color: #f2ca27; }
   .masonry footer.entry-meta .post-link a:active {
     color: #dab10d; }
+.masonry .post-featured.masonry-brick {
+  background-color: #cce5f6; }

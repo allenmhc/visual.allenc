@@ -50,4 +50,8 @@
     .post-link a:hover { color: color-hover($color-yellow); }
     .post-link a:active { color: color-active($color-yellow); }
   }
+
+  .post-featured.masonry-brick {
+    background-color: lighten($color-blue, 35%);
+  }
 }
