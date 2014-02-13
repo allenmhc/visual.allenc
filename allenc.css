@@ -1189,6 +1189,8 @@ body {
 .hentry {
   background: #ecf0f1;
   box-shadow: none; }
+  .hentry:hover {
+    background-color: #fbfcfc; }
 
 .entry-header {
   border-bottom: none; }
@@ -1228,3 +1230,5 @@ body {
     color: #dab10d; }
 .masonry .post-featured.masonry-brick {
   background-color: #cce5f6; }
+  .masonry .post-featured.masonry-brick:hover {
+    background-color: #e1f0fa; }
