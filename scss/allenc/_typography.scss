@@ -9,3 +9,7 @@
 .entry-meta, .entry-summary, .entry-content {
   font-family: $para-font-family;
 }
+
+code, kbd, tt, var {
+  font-family: $monospace-font-family;
+}

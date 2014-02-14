@@ -11,6 +11,9 @@
 .entry-meta, .entry-summary, .entry-content {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
+code, kbd, tt, var {
+  font-family: "Source Sans", Inconsolata, Courier, monospace; }
+
 /*
 	Zocial Butons
 	http://zocial.smcllns.com

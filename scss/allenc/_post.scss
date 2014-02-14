@@ -42,6 +42,7 @@ footer.entry-meta {
   border-top-color: $color-white-dark;
 }
 
+// Masonry layout
 .masonry {
   .entry-title {
     @extend .entry-title;
@@ -71,6 +72,7 @@ footer.entry-meta {
   }
 }
 
+// Single post layout
 $post-padding: 40px;
 $single-post-width: 600px + 2 * $post-padding;
 .single-post {
