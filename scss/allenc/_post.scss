@@ -71,8 +71,21 @@ footer.entry-meta {
   }
 }
 
-.single-post .post {
-  max-width: 550px;
+$post-padding: 40px;
+$single-post-width: 600px + 2 * $post-padding;
+.single-post {
+  .entry-header {
+    padding: 20px $post-padding;
+  }
+
+  .entry-content {
+    padding-left: $post-padding;
+    padding-right: $post-padding;
+  }
+}
+
+.post-navigation, #disqus_thread, .single-post .post {
+  max-width: $single-post-width;
   margin-left: auto;
   margin-right: auto;
 }

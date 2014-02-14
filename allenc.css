@@ -1254,7 +1254,13 @@ footer.entry-meta {
   .masonry .post-featured.masonry-brick:hover {
     background-color: #e1f0fa; }
 
-.single-post .post {
-  max-width: 550px;
+.single-post .entry-header {
+  padding: 20px 40px; }
+.single-post .entry-content {
+  padding-left: 40px;
+  padding-right: 40px; }
+
+.post-navigation, #disqus_thread, .single-post .post {
+  max-width: 680px;
   margin-left: auto;
   margin-right: auto; }
