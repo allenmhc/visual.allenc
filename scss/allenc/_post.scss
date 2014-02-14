@@ -1,7 +1,6 @@
 .hentry {
   background: $color-white;
   box-shadow: none;
-  &:hover { background-color: color-hover($color-white); }
 }
 
 .entry-header {
@@ -33,13 +32,26 @@
   border-bottom: none;
 }
 
+.entry-content {
+  border-top-color: $color-white-dark;
+  border-bottom: none;
+  line-height: 23px;
+}
+
+footer.entry-meta {
+  border-top-color: $color-white-dark;
+}
+
 .masonry {
   .entry-title {
     @extend .entry-title;
   }
 
+  .hentry {
+    &:hover { background-color: color-hover($color-white); }
+  }
+
   footer.entry-meta {
-    border-top-color: $color-white-dark;
     padding-top: 10px;
     padding-bottom: 10px;
     a {
@@ -57,4 +69,10 @@
     background-color: $featured-color;
     &:hover { background-color: color-hover($featured-color); }
   }
+}
+
+.single-post .post {
+  max-width: 550px;
+  margin-left: auto;
+  margin-right: auto;
 }

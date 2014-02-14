@@ -910,6 +910,9 @@ body {
   background: #cfd9db;
   color: #1f1f1f; }
 
+#primary {
+  padding-right: 0; }
+
 #masthead {
   box-shadow: 0 1px 1px 0 rgba(241, 196, 15, 0.8); }
   #masthead hgroup {
@@ -1186,11 +1189,20 @@ body {
   margin-right: 0;
   font-size: 2.5rem; }
 
+#nav-below.post-navigation, #nav-below.paging-navigation {
+  border-color: #bdc3c7;
+  box-shadow: none;
+  font-family: "Lato", Arial, sans-serif; }
+#nav-below a {
+  color: #2980b9; }
+  #nav-below a:hover {
+    color: #2e8ece; }
+  #nav-below a:active {
+    color: #2472a4; }
+
 .hentry {
   background: #ecf0f1;
   box-shadow: none; }
-  .hentry:hover {
-    background-color: #fbfcfc; }
 
 .entry-header {
   border-bottom: none; }
@@ -1213,8 +1225,17 @@ body {
   border-top-color: #bdc3c7;
   border-bottom: none; }
 
-.masonry footer.entry-meta {
+.entry-content {
   border-top-color: #bdc3c7;
+  border-bottom: none;
+  line-height: 23px; }
+
+footer.entry-meta {
+  border-top-color: #bdc3c7; }
+
+.masonry .hentry:hover {
+  background-color: #fbfcfc; }
+.masonry footer.entry-meta {
   padding-top: 10px;
   padding-bottom: 10px; }
   .masonry footer.entry-meta a {
@@ -1232,3 +1253,8 @@ body {
   background-color: #cce5f6; }
   .masonry .post-featured.masonry-brick:hover {
     background-color: #e1f0fa; }
+
+.single-post .post {
+  max-width: 550px;
+  margin-left: auto;
+  margin-right: auto; }

@@ -12,13 +12,13 @@
  * @since Visual 0.1
  */
 if ( ! isset( $content_width ) )
-  $content_width = 670; /* pixels */
+  $content_width = 990; /* pixels */
 
 function visual_content_width() {
   global $content_width;
 
   if ( is_home() || is_search() || is_archive() )
-    $content_width = 326;
+    $content_width = 990;
 
   if ( is_page_template( 'page-fullwidth.php' ) )
     $content_width = 990;
