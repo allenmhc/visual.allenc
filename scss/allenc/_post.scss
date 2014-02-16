@@ -91,3 +91,55 @@ $single-post-width: 600px + 2 * $post-padding;
   margin-left: auto;
   margin-right: auto;
 }
+
+// Post typography, spacing, etc.
+.entry-content {
+  a, a:visited {
+    color: $color-blue;
+  }
+
+  h1, h2 {
+    letter-spacing: 0;
+  }
+
+  a.fn-ref-mark {
+    border-bottom: none;
+    padding-left: 3px;
+    &:hover { text-decoration: none; }
+  }
+
+  sup {
+    line-height: 0;
+  }
+
+  #footnote-list {
+    color: lighten(#1f1f1f, 20%);
+    font-size: 13px;
+    margin: 10px 0;
+    line-height: 22px;
+    ol {
+      margin-top: 5px;
+      a:last-child { text-decoration: none; }
+    }
+  }
+}
+
+// jQuery Footnotes hover.
+body div#footnotediv {
+  border-radius: 5px;
+  box-shadow: none;
+  font-size: 13px;
+  font-family: $para-font-family;
+  color: lighten(#1f1f1f, 20%);
+  max-width: 350px;
+  padding: 10px 15px;
+  background-color: lighten($color-white, 10%);
+  border: 1px solid $color-grey;
+  line-height: 22px;
+  a {
+    color: $color-blue;
+    &:hover { color: $color-blue; }
+    &:last-child { text-decoration: none; }
+  }
+}
+
