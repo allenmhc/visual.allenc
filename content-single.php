@@ -60,5 +60,9 @@
         the_title_attribute( 'echo=0' )
       );
     ?>
+
   </footer><!-- .entry-meta -->
+
 </article><!-- #post-<?php the_ID(); ?> -->
+
+<div class="related-posts clearfix"><?php related_posts(); ?></div>

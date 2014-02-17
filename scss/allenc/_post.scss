@@ -30,6 +30,8 @@
 .entry-summary {
   border-top-color: $color-white-dark;
   border-bottom: none;
+  padding-top: 10px;
+  padding-bottom: 0;
 }
 
 .entry-content {
@@ -78,14 +80,19 @@ footer.entry-meta {
 }
 
 // Single post layout
-$post-padding: 40px;
+$post-padding: 20px;
 $single-post-width: 600px + 2 * $post-padding;
 .single-post {
   .entry-header {
-    padding: 20px $post-padding;
+    padding: $post-padding/2 $post-padding;
   }
 
   .entry-content {
+    padding-left: $post-padding;
+    padding-right: $post-padding;
+  }
+
+  footer.entry-meta {
     padding-left: $post-padding;
     padding-right: $post-padding;
   }
@@ -125,6 +132,54 @@ $single-post-width: 600px + 2 * $post-padding;
     ol {
       margin-top: 5px;
       a:last-child { text-decoration: none; }
+    }
+  }
+}
+
+// Related posts boxes
+.related-posts {
+  max-width: $single-post-width;
+  margin: 0 auto;
+
+  .post-wrapper {
+    width: 50%;
+    float: left;
+    &:nth-child(odd) {
+      .post { margin-right: $post-padding/2; }
+    }
+    &:nth-child(even) {
+      .post { margin-left: $post-padding/2; }
+    }
+  }
+  .post {
+    background-color: darken($color-white, 5%);
+    height: 105px;
+  }
+  .entry-header {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    height: 40px;
+    overflow: hidden;
+  }
+  .entry-title {
+    font-size: 1.6rem;
+  }
+  .entry-meta {
+    font-size: 1.2rem;
+    padding-top: $post-padding/2;
+    .post-link {
+      line-height: 0.7;
+      margin-right: -10px;
+      a:hover { color: color-hover($color-yellow); }
+      a:active { color: color-active($color-yellow); }
+    }
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .related-posts {
+    .post {
+      min-height: 100px;
     }
   }
 }

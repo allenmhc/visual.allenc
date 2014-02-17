@@ -1229,7 +1229,9 @@ a {
 
 .entry-summary {
   border-top-color: #bdc3c7;
-  border-bottom: none; }
+  border-bottom: none;
+  padding-top: 10px;
+  padding-bottom: 0; }
 
 .entry-content {
   border-top-color: #bdc3c7;
@@ -1267,13 +1269,16 @@ footer.entry-meta {
     background-color: #e1f0fa; }
 
 .single-post .entry-header {
-  padding: 20px 40px; }
+  padding: 10px 20px; }
 .single-post .entry-content {
-  padding-left: 40px;
-  padding-right: 40px; }
+  padding-left: 20px;
+  padding-right: 20px; }
+.single-post footer.entry-meta {
+  padding-left: 20px;
+  padding-right: 20px; }
 
 .post-navigation, #disqus_thread, .single-post .post {
-  max-width: 680px;
+  max-width: 640px;
   margin-left: auto;
   margin-right: auto; }
 
@@ -1298,6 +1303,40 @@ footer.entry-meta {
     .entry-content #footnote-list ol a:last-child {
       text-decoration: none; }
 
+.related-posts {
+  max-width: 640px;
+  margin: 0 auto; }
+  .related-posts .post-wrapper {
+    width: 50%;
+    float: left; }
+    .related-posts .post-wrapper:nth-child(odd) .post {
+      margin-right: 10px; }
+    .related-posts .post-wrapper:nth-child(even) .post {
+      margin-left: 10px; }
+  .related-posts .post {
+    background-color: #dde4e6;
+    height: 105px; }
+  .related-posts .entry-header {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    height: 40px;
+    overflow: hidden; }
+  .related-posts .entry-title {
+    font-size: 1.6rem; }
+  .related-posts .entry-meta {
+    font-size: 1.2rem;
+    padding-top: 10px; }
+    .related-posts .entry-meta .post-link {
+      line-height: 0.7;
+      margin-right: -10px; }
+      .related-posts .entry-meta .post-link a:hover {
+        color: #f2ca27; }
+      .related-posts .entry-meta .post-link a:active {
+        color: #dab10d; }
+
+@media screen and (max-width: 490px) {
+  .related-posts .post {
+    min-height: 100px; } }
 body div#footnotediv {
   border-radius: 5px;
   box-shadow: none;
