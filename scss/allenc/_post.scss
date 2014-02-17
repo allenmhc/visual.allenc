@@ -40,6 +40,11 @@
 
 footer.entry-meta {
   border-top-color: $color-white-dark;
+  a {
+    color: $color-blue-dark;
+    &:hover { color: color-hover($color-blue-dark); }
+    &:active { color: color-active($color-blue-dark); }
+  }
 }
 
 // Masonry layout

@@ -45,9 +45,9 @@
       } else {
         // But this blog has loads of categories so we should probably display them here
         if ( '' != $tag_list ) {
-          $meta_text = __( 'This entry was posted in %1$s and tagged %2$s.', 'visual' );
+          $meta_text = __( 'Posted in %1$s and tagged %2$s', 'visual' );
         } else {
-          $meta_text = __( 'This entry was posted in %1$s.', 'visual' );
+          $meta_text = __( 'Posted in %1$s', 'visual' );
         }
 
       } // end check for categories on this blog
@@ -60,7 +60,5 @@
         the_title_attribute( 'echo=0' )
       );
     ?>
-
-    <?php edit_post_link( __( 'Edit', 'visual' ), '<span class="edit-link">', '</span>' ); ?>
   </footer><!-- .entry-meta -->
 </article><!-- #post-<?php the_ID(); ?> -->
