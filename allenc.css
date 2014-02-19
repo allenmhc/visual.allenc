@@ -911,7 +911,8 @@ button:-moz-focus-inner {
 body {
   min-width: 480px;
   background: #cfd9db;
-  color: #1f1f1f; }
+  color: #1f1f1f;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 a {
   color: #3498db; }
@@ -1354,3 +1355,12 @@ body div#footnotediv {
       color: #3498db; }
     body div#footnotediv a:last-child {
       text-decoration: none; }
+
+.page-header {
+  box-shadow: none;
+  border-color: #bdc3c7;
+  color: #1f1f1f;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+  .page-header .page-title {
+    font-size: 1.4rem; }
