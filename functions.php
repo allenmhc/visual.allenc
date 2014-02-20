@@ -180,3 +180,57 @@ function visual_body_class( $classes ) {
 }
 
 add_filter('body_class','visual_body_class');
+
+
+/**
+ * Smart archives generator override
+ */
+class SAR_Custom_Fancy_Generator extends SAR_Generator {
+
+  protected function generate_year_list( $current_year = 0 ) {
+    $data = array();
+
+    foreach ( $this->get_years_with_posts( 'desc' ) as $year ) {
+      $data['years'][] = array(
+        'year-link' => get_year_link( $year ),
+        'year' => $year,
+        'is-current' => ( $year == $current_year ) ? array(true) : false
+      );
+    }
+
+    return self::mustache_render( 'year-list.html', $data );
+  }
+
+  protected function generate_fancy() {
+    $months_long = $this->get_months();
+
+    $data = array(
+      'year-list' => $this->generate_year_list(),
+    );
+
+    foreach ( $this->get_years_with_posts( 'desc' ) as $year ) {
+      $pane = array(
+        'year' => $year,
+        'month-list' => $this->generate_month_list( $year )
+      );
+
+      foreach ( range( 1, 12 ) as $i ) {
+        $post_list = $this->generate_post_list( $year, $i, "\n\t\t" );
+
+        if ( !$post_list )
+          continue;
+
+        $pane['post-lists'][] = array(
+          'heading' => "$months_long[$i] $year",
+          'archive-link' => get_month_link( $year, $i ),
+          'archive-text' => __( 'See all', 'smart-archives-reloaded' ),
+          'post-list' => $post_list,
+        );
+      }
+
+      $data['year-panes'][] = $pane;
+    }
+
+    return self::mustache_render( 'fancy.html', $data );
+  }
+}
