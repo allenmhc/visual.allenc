@@ -9,3 +9,27 @@
     font-size: 1.4rem;
   }
 }
+
+#smart-archives-fancy {
+  font-family: $header-font-family;
+  font-weight: 300;
+
+  .year-list {
+    background: transparent;
+    margin-top: 0 !important;
+
+    a {
+      font-size: 2.4rem;
+      padding-left: 15px !important;
+      padding-right: 15px !important;
+      color: $color-blue;
+      &:hover { color: color-hover($color-blue); }
+      &:active { color: color-active($color-blue); }
+
+      &.current {
+        font-weight: 400;
+        background: none;
+      }
+    }
+  }
+}

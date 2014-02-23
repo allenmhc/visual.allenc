@@ -18,3 +18,15 @@ get_header(); ?>
 
 <?php get_footer(); ?>
 
+<script>
+// Select the first year as the default.
+// This is ghetto, but in line with how the plugin script is written.
+jQuery( document ).ready( function( $ ) {
+  $( '.tabs' ).tabs( '> .pane' );
+  $( '#smart-archives-fancy .year-list' )
+    .find( 'a' ).click( function( ev ) {
+      $( '.pane .tabs:visible a:first' ).click();
+    } ).end()
+    .find( 'a:first' ).click();
+} );
+</script>

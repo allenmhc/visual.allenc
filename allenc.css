@@ -1364,3 +1364,22 @@ body div#footnotediv {
   padding-bottom: 10px; }
   .page-header .page-title {
     font-size: 1.4rem; }
+
+#smart-archives-fancy {
+  font-family: "Lato", Arial, sans-serif;
+  font-weight: 300; }
+  #smart-archives-fancy .year-list {
+    background: transparent;
+    margin-top: 0 !important; }
+    #smart-archives-fancy .year-list a {
+      font-size: 2.4rem;
+      padding-left: 15px !important;
+      padding-right: 15px !important;
+      color: #3498db; }
+      #smart-archives-fancy .year-list a:hover {
+        color: #4aa3df; }
+      #smart-archives-fancy .year-list a:active {
+        color: #258cd1; }
+      #smart-archives-fancy .year-list a.current {
+        font-weight: 400;
+        background: none; }
