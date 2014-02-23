@@ -1421,3 +1421,14 @@ body div#footnotediv {
       font-weight: 300; }
       #smart-archives-fancy .month-heading .month-archive-link a:visited {
         color: #3498db; }
+  #smart-archives-fancy .archive-list {
+    font-family: "Titillium Web", "Arial Narrow", sans-serif;
+    font-size: 1.6rem;
+    margin-left: 25px;
+    margin-right: 25px; }
+    #smart-archives-fancy .archive-list li {
+      margin-bottom: 5px; }
+    #smart-archives-fancy .archive-list a {
+      color: #2980b9; }
+      #smart-archives-fancy .archive-list a:hover {
+        text-decoration: none; }

@@ -78,4 +78,18 @@
       a:visited { color: $color-blue; }
     }
   }
+
+  .archive-list {
+    font-family: $title-font-family;
+    font-size: 1.6rem;
+    margin-left: 25px;
+    margin-right: 25px;
+    li {
+      margin-bottom: 5px;
+    }
+    a {
+      color: $color-blue-dark;
+      &:hover { text-decoration: none; }
+    }
+  }
 }
