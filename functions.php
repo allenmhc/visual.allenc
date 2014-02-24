@@ -136,7 +136,7 @@ function visual_scripts() {
     wp_enqueue_script( 'keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '20130220' );
   }
 
-  if ( !is_singular() && !is_404() && !is_author() ) {
+  if ( !is_404() && !is_author() ) {
     wp_enqueue_script( 'visual-masonry', get_template_directory_uri() . '/js/jquery.masonry.min.js', array( 'jquery' ), '20130220', true );
   }
 
@@ -154,7 +154,6 @@ add_action( 'wp_enqueue_scripts', 'visual_scripts' );
 
 function visual_fonts() {
     $font_families = array();
-    $font_families[] = 'Raleway:400,700';
     $font_families[] = 'Lato:100,300,400,900';
     $font_families[] = 'Titillium+Web:300,400,700';
     $font_families[] = 'Open+Sans:400,700,400italic,700italic';
@@ -174,7 +173,7 @@ add_action( 'wp_enqueue_scripts', 'visual_fonts' );
  */
 
 function visual_body_class( $classes ) {
-  if ( !is_singular() && !is_404() && !is_author() )
+  if ( !is_404() && !is_author() )
     $classes[] = 'masonry';
   return $classes;
 }
