@@ -1,0 +1,92 @@
+// About page specific styles.
+
+.about {
+  max-width: 1020px;
+  height: 765px;
+  padding-left: 0;
+  padding-right: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.about-bg {
+  background: url(img/keyboard-bg.jpg) no-repeat;
+  width: 1020px;
+  height: 765px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 0;
+}
+
+$about-box-padding: 15px;
+$about-color: #1f1f1f;
+.about-box {
+  width: 300px;
+  background-color: rgba($color-white-dark, 0.6);
+  border-radius: 3px;
+  padding: 15px;
+  position: absolute;
+
+  h3 {
+    font-size: 1.5rem;
+    color: $color-blue-dark;
+    margin-bottom: 5px;
+  }
+  p {
+    line-height: 1.4;
+    a, a:visited {
+      color: $about-color;
+      text-decoration: underline;
+      &:hover { color: color-hover($about-color); }
+      &:active { color: color-active($about-color); }
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &.about-box-1 {
+    top: 50px;
+    left: $about-box-padding;
+  }
+  &.about-box-2 {
+    bottom: 20px;
+    left: $about-box-padding;
+  }
+  &.about-box-3 {
+    bottom: 60px;
+    right: $about-box-padding;
+  }
+}
+
+@media screen and (max-width: 790px) {
+  .about-box { width: 250px; }
+}
+@media screen and (max-width: 640px) {
+  .about-box { width: 180px; }
+}
+@media screen and (max-width: 490px) {
+  .about-box { width: 170px; }
+}
+
+.about-box-overview {
+  position: absolute;
+  right: $about-box-padding;
+  top: $about-box-padding;
+  text-align: right;
+  font-weight: 300;
+  color: $color-white-dark;
+  width: 150px;
+
+  h2 {
+    font-family: $header-font-family;
+    font-size: 2.5rem;
+    color: $color-turq;
+    margin-bottom: 10px;
+  }
+
+  .update-timestamp {
+    font-size: 75%;
+  }
+}
