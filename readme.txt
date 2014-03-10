@@ -1,30 +1,19 @@
-Visual is a well-crafted responsive WordPress theme designed to showcase images, artwork and photgraphy in a smart grid layout.
+Visual.allenc is a modification of the Visual Wordpress theme, customized for display on allenc.com.
 
-This theme makes use of several libraries and scripts built by others.  A big thanks to everyone who has worked on these projects:
+Visual:
 
-* Visual was built off the foundation of Underscores (_s):
+- http://wptheming.com/2013/03/visual-theme/
 
-- Underscores: http://underscores.me
-- GPL License: https://github.com/Automattic/_s/blob/master/license.txt
+Thanks to Devin for crafting such a nice blogging theme.
 
-* Masonry.js, which responsible for the grid layout on archive pages
+Visual.allenc makes use of the Smart Archives Reloaded Wordpress plugin, again modified, to render the Archives landing page.
 
-- http://masonry.desandro.com
-- MIT License: https://github.com/desandro/masonry/blob/master/jquery.masonry.js
+Smart Archives Reloaded:
 
-* Font:
+- http://scribu.net/wordpress/smart-archives-reloaded/
 
-- Raleway (http://www.google.com/webfonts/specimen/Raleway)
-- SIL Open Font License: https://github.com/theleagueof/raleway/blob/master/Open%20Font%20License.markdown
+I use a number of very nice webfonts from the Google Fonts project:
 
-* Selected glyphs in the icon font from:
-
-- Entypo by Daniel Bruce (http://www.entypo.com/)
-- SIL Open Font License: http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
-
-- Font Awesome (http://fortawesome.github.com/Font-Awesome)
-- SIL Open Font License: http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
-
-* Icon glyphs packaged with Fontello:
-
-- Fontello: http://fontello.com
+- Lato (https://www.google.com/fonts/specimen/Lato)
+- Titillium Web (http://www.google.com/fonts/specimen/Titillium+Web)
+- Open Sans (http://www.google.com/fonts/specimen/Open+Sans)
