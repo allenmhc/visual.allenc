@@ -1263,6 +1263,8 @@ a {
     color: #2472a4; }
 
 .hentry {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
   background: #ecf0f1;
   box-shadow: none; }
 
@@ -1320,9 +1322,13 @@ footer.entry-meta {
   .masonry footer.entry-meta .post-link a:active {
     color: #dab10d; }
 .masonry .post-featured.masonry-brick {
-  background-color: #cce5f6; }
+  border: 2px solid #f0b37e; }
   .masonry .post-featured.masonry-brick:hover {
-    background-color: #e1f0fa; }
+    border-color: #f3c195; }
+    .masonry .post-featured.masonry-brick:hover footer.entry-meta {
+      background-color: #f3c195; }
+  .masonry .post-featured.masonry-brick footer.entry-meta {
+    background-color: #f0b37e; }
 
 .single-post .entry-header {
   padding: 10px 20px; }

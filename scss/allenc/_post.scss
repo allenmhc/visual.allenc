@@ -1,4 +1,5 @@
 .hentry {
+  @include box-sizing();
   background: $color-white;
   box-shadow: none;
 }
@@ -72,10 +73,14 @@ footer.entry-meta {
     .post-link a:active { color: color-active($color-yellow); }
   }
 
-  $featured-color: lighten($color-blue, 35%);
+  $featured-color: lighten($color-orange, 20%);
   .post-featured.masonry-brick {
-    background-color: $featured-color;
-    &:hover { background-color: color-hover($featured-color); }
+    border: 2px solid $featured-color;
+    &:hover {
+      border-color: color-hover($featured-color);
+      footer.entry-meta { background-color: color-hover($featured-color); }
+    }
+    footer.entry-meta { background-color: $featured-color; }
   }
 }
 
