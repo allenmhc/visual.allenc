@@ -24,7 +24,7 @@
   </header><!-- .entry-header -->
 
   <?php $options = get_option( 'visual-theme', false );
-  $excerpts = false;
+  $excerpts = true;
   if ( $options['display_excerpts'] ) { $excerpts = true; } ?>
   <?php if ( is_search() || $excerpts ) : ?>
   <div class="entry-summary">
