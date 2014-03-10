@@ -120,12 +120,13 @@ if ( ! function_exists( 'visual_posted_on' ) ) :
  *
  * @since Visual 0.1
  */
-function visual_posted_on() {
+function visual_posted_on($short=false) {
+  $format_string = $short ? "M j, Y" : "F j, Y";
   printf( __( 'Posted on <a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s">%4$s</time></a>', 'visual' ),
     esc_url( get_permalink() ),
     esc_attr( get_the_time() ),
     esc_attr( get_the_date( 'c' ) ),
-    esc_html( get_the_date() ),
+    esc_html( get_the_date( $format_string ) ),
     esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
     esc_attr( sprintf( __( 'View all posts by %s', 'visual' ), get_the_author() ) ),
     get_the_author()
