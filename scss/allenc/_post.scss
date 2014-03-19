@@ -110,9 +110,23 @@ $single-post-width: 600px + 2 * $post-padding;
 }
 
 // Post typography, spacing, etc.
+$body-color: #1f1f1f;
+$underline-color: lighten($body-color, 25%);
 .entry-content {
-  a, a:visited {
-    color: $color-blue;
+  a {
+    border-bottom: 1px solid $underline-color;
+    color: $body-color;
+    display: inline-block;
+    line-height: 1;
+    text-decoration: none;
+    &:hover {
+      color: color-hover($body-color);
+      border-bottom-color: color-hover($underline-color);
+    }
+    &:active {
+      color: color-active($body-color);
+      border-bottom-color: color-active($underline-color);
+    }
   }
 
   h1, h2 {
@@ -136,7 +150,7 @@ $single-post-width: 600px + 2 * $post-padding;
     line-height: 22px;
     ol {
       margin-top: 5px;
-      a:last-child { text-decoration: none; }
+      a:last-child { border-bottom: none; }
     }
   }
 }
@@ -202,9 +216,9 @@ body div#footnotediv {
   border: 1px solid $color-grey;
   line-height: 22px;
   a {
-    color: $color-blue;
-    &:hover { color: $color-blue; }
-    &:last-child { text-decoration: none; }
+    color: $body-color;
+    &:hover { color: color-hover($body-color); }
+    &:last-child { border-bottom: none; }
   }
 }
 

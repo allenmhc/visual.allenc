@@ -1344,8 +1344,18 @@ footer.entry-meta {
   margin-left: auto;
   margin-right: auto; }
 
-.entry-content a, .entry-content a:visited {
-  color: #3498db; }
+.entry-content a {
+  border-bottom: 1px solid #5f5f5f;
+  color: #1f1f1f;
+  display: inline-block;
+  line-height: 1;
+  text-decoration: none; }
+  .entry-content a:hover {
+    color: #2c2c2c;
+    border-bottom-color: #6c6c6c; }
+  .entry-content a:active {
+    color: #121212;
+    border-bottom-color: #525252; }
 .entry-content h1, .entry-content h2 {
   letter-spacing: 0; }
 .entry-content a.fn-ref-mark {
@@ -1363,7 +1373,7 @@ footer.entry-meta {
   .entry-content #footnote-list ol {
     margin-top: 5px; }
     .entry-content #footnote-list ol a:last-child {
-      text-decoration: none; }
+      border-bottom: none; }
 
 .related-posts {
   max-width: 640px;
@@ -1411,11 +1421,11 @@ body div#footnotediv {
   border: 1px solid #95a5a6;
   line-height: 22px; }
   body div#footnotediv a {
-    color: #3498db; }
+    color: #1f1f1f; }
     body div#footnotediv a:hover {
-      color: #3498db; }
+      color: #2c2c2c; }
     body div#footnotediv a:last-child {
-      text-decoration: none; }
+      border-bottom: none; }
 
 .page-header {
   box-shadow: none;
