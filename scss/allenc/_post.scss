@@ -156,7 +156,7 @@ $underline-color: lighten($body-color, 25%);
 }
 
 // Related posts boxes
-.related-posts {
+.related-posts .yarpp-related {
   max-width: $single-post-width;
   margin: 0 auto;
 
@@ -182,7 +182,7 @@ $underline-color: lighten($body-color, 25%);
   }
   .entry-title {
     font-size: 1.6rem;
-    .yarpp-related a {
+    a {
       font-weight: 400 !important;
     }
   }
