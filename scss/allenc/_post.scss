@@ -156,7 +156,7 @@ $underline-color: lighten($body-color, 25%);
 }
 
 // Related posts boxes
-.related-posts .yarpp-related {
+.related-posts {
   max-width: $single-post-width;
   margin: 0 auto;
 
@@ -182,9 +182,6 @@ $underline-color: lighten($body-color, 25%);
   }
   .entry-title {
     font-size: 1.6rem;
-    a {
-      font-weight: 400 !important;
-    }
   }
   .entry-meta {
     font-size: 1.2rem;
@@ -195,6 +192,10 @@ $underline-color: lighten($body-color, 25%);
       a:hover { color: color-hover($color-yellow); }
       a:active { color: color-active($color-yellow); }
     }
+  }
+
+  .yarpp-related .entry-title a {
+    font-weight: 400 !important;
   }
 }
 

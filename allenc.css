@@ -1375,38 +1375,38 @@ footer.entry-meta {
     .entry-content #footnote-list ol a:last-child {
       border-bottom: none; }
 
-.related-posts .yarpp-related {
+.related-posts {
   max-width: 640px;
   margin: 0 auto; }
-  .related-posts .yarpp-related .post-wrapper {
+  .related-posts .post-wrapper {
     width: 50%;
     float: left; }
-    .related-posts .yarpp-related .post-wrapper:nth-child(odd) .post {
+    .related-posts .post-wrapper:nth-child(odd) .post {
       margin-right: 10px; }
-    .related-posts .yarpp-related .post-wrapper:nth-child(even) .post {
+    .related-posts .post-wrapper:nth-child(even) .post {
       margin-left: 10px; }
-  .related-posts .yarpp-related .post {
+  .related-posts .post {
     background-color: #dde4e6;
     height: 105px; }
-  .related-posts .yarpp-related .entry-header {
+  .related-posts .entry-header {
     padding-top: 15px;
     padding-bottom: 15px;
     height: 40px;
     overflow: hidden; }
-  .related-posts .yarpp-related .entry-title {
+  .related-posts .entry-title {
     font-size: 1.6rem; }
-    .related-posts .yarpp-related .entry-title a {
-      font-weight: 400 !important; }
-  .related-posts .yarpp-related .entry-meta {
+  .related-posts .entry-meta {
     font-size: 1.2rem;
     padding-top: 10px; }
-    .related-posts .yarpp-related .entry-meta .post-link {
+    .related-posts .entry-meta .post-link {
       line-height: 0.7;
       margin-right: -10px; }
-      .related-posts .yarpp-related .entry-meta .post-link a:hover {
+      .related-posts .entry-meta .post-link a:hover {
         color: #f2ca27; }
-      .related-posts .yarpp-related .entry-meta .post-link a:active {
+      .related-posts .entry-meta .post-link a:active {
         color: #dab10d; }
+  .related-posts .yarpp-related .entry-title a {
+    font-weight: 400 !important; }
 
 @media screen and (max-width: 490px) {
   .related-posts .post {
