@@ -1406,6 +1406,9 @@ footer.entry-meta {
       .related-posts .entry-meta .post-link a:active {
         color: #dab10d; }
 
+.yarpp-related a {
+  font-weight: 400 !important; }
+
 @media screen and (max-width: 490px) {
   .related-posts .post {
     min-height: 100px; } }

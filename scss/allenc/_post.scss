@@ -195,6 +195,10 @@ $underline-color: lighten($body-color, 25%);
   }
 }
 
+.yarpp-related a {
+  font-weight: 400 !important;
+}
+
 @media screen and (max-width: 490px) {
   .related-posts {
     .post {
