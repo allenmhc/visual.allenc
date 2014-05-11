@@ -182,6 +182,9 @@ $underline-color: lighten($body-color, 25%);
   }
   .entry-title {
     font-size: 1.6rem;
+    .yarpp-related a {
+      font-weight: 400 !important;
+    }
   }
   .entry-meta {
     font-size: 1.2rem;
@@ -193,10 +196,6 @@ $underline-color: lighten($body-color, 25%);
       a:active { color: color-active($color-yellow); }
     }
   }
-}
-
-.yarpp-related a {
-  font-weight: 400 !important;
 }
 
 @media screen and (max-width: 490px) {
