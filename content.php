@@ -38,14 +38,4 @@
   </div><!-- .entry-content -->
   <?php endif; ?>
 
-  <footer class="entry-meta clearfix">
-    <?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
-    <span class="comments-link">
-      <?php comments_popup_link( __( 'Comment', 'visual' ), __( '1 Comment', 'visual' ), __( ' % Comments', 'visual' ), 'icon-comment' ); ?>
-    </span>
-    <?php endif; ?>
-    <span class="post-link">
-      <a href="<?php the_permalink(); ?>"><span class="icon-right-circled"></span><span class="visuallyhidden"><?php the_title(); ?></span></a>
-    </span>
-  </footer><!-- .entry-meta -->
 </article><!-- #post-<?php the_ID(); ?> -->
