@@ -116,7 +116,6 @@ $underline-color: lighten($body-color, 25%);
   a {
     border-bottom: 1px solid $underline-color;
     color: $body-color;
-    display: inline-block;
     line-height: 1;
     text-decoration: none;
     &:hover {
